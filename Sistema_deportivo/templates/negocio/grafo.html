@@ -1,0 +1,79 @@
+{% extends "template.html" %}
+{% block content %}
+<h2 class="text-white">Lista de negocios</h2>
+<div class="booking-form-body">
+
+    <div class="row" style="margin: 20px;">
+        <div class="card" style="padding: 20px;">
+            <div class="card-header">
+                <h5>Agregar adyacencias</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <!-- Mensajes Flash -->
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            <div class="alert alert-danger">
+                                {% for category, message in messages %}
+                                    <p class="text-dark">{{ message }}</p>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    {% endwith %}
+                    <form id="form" class="row" action="{{ url_for('router.crear_ady') }}" method="post" role="form">
+                        <div class="col-lg-6 col-12">
+                            <span>Origen:</span>
+                            <select id="origen" class="form-control" name="origen">
+                                {% for item in lista %}
+                                    <option value="{{ item._id }}">{{ item._nombre }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <span>Destino:</span>
+                            <select id="destino" class="form-control" name="destino">
+                                {% for item in lista %}
+                                    <option value="{{ item._id }}">{{ item._nombre }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-lg-6 col-12" style="margin-top: 20px;">
+                            <button id="boton" type="submit" class="btn btn-success">Agregar</button>
+                        </div>
+                        <div class="col-lg-6 col-12" style="margin-top: 20px;">
+                            <a href="/negocios" class="btn btn-danger">Volver</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="overflow-x: auto;">
+        <table id="tabla" class="table table-bordered table-striped text-white" style="width: 100%; table-layout: auto;">
+            <thead>
+                <tr>
+                    <th width="150">-----</th>
+                    {% for item in lista %}
+                        <th>{{ item._nombre }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in range(lista|length) %}
+                    <tr>
+                        <td>{{ lista[i]._nombre }}</td>
+                        {% for j in range(lista|length) %}
+                            <td>
+                                {% if distancias[i][j] is not none %}
+                                    {{ "%.2f"|format(distancias[i][j]) }}
+                                {% endif %}
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
