@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "nombre": "sintetica Podocarpus",
+        "direccion": "parque Podocarpus",
+        "precio": "15$",
+        "longitud": -79.1939163208008,
+        "latitud": -4.00293848560777
+    },
+    {
+        "id": 2,
+        "nombre": "punto de encuentro",
+        "direccion": "calle catacocha",
+        "precio": "20$",
+        "longitud": -79.19752120971681,
+        "latitud": -4.007562022859304
+    },
+    {
+        "id": 3,
+        "nombre": "calva y calva",
+        "direccion": "calle Bernardo Valdivieso",
+        "precio": "18$",
+        "longitud": -79.20867919921876,
+        "latitud": -4.017836456456883
+    },
+    {
+        "id": 4,
+        "nombre": "Jogo Bonito",
+        "direccion": "calle Galileo Galilei",
+        "precio": "10$",
+        "longitud": -79.20591115951538,
+        "latitud": -4.027862466030544
+    },
+    {
+        "id": 5,
+        "nombre": "sinteticazo",
+        "direccion": "calle: Cabo R",
+        "precio": "15$",
+        "longitud": -79.20964479446413,
+        "latitud": -4.029788884219855
+    },
+    {
+        "id": 6,
+        "nombre": "Canchas Bernardo",
+        "direccion": "Calle:  Catamayo",
+        "precio": "13$",
+        "longitud": -79.19887304306032,
+        "latitud": -4.011380701978981
+    },
+    {
+        "id": 7,
+        "nombre": "Canchas los Geraneos",
+        "direccion": "Calle:  Catamayo",
+        "precio": "13$",
+        "longitud": -79.20264959335329,
+        "latitud": -4.007763231300244
+    },
+    {
+        "id": 8,
+        "nombre": "Estadio UNL",
+        "direccion": "AV. Universitaria",
+        "precio": "15$",
+        "longitud": -79.20271396636964,
+        "latitud": -4.033787257040626
+    },
+    {
+        "id": 9,
+        "nombre": "Sintetica Obrapia",
+        "direccion": "calle: jos\u00e9 maria ",
+        "precio": "20$",
+        "longitud": -79.20904397964478,
+        "latitud": -3.9909300095314166
+    },
+    {
+        "id": 10,
+        "nombre": "cancha zarzas",
+        "direccion": "AV. Los Paltas",
+        "precio": "10$",
+        "longitud": -79.2127561569214,
+        "latitud": -4.001193949230161
+    }
+]
